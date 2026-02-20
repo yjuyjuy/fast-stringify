@@ -6,7 +6,8 @@ import sortBy from 'lodash/sortBy.js';
 import decircularize from 'decircularize';
 import fastJsonStableStringify from 'fast-json-stable-stringify';
 import fasterStableStringify from 'faster-stable-stringify';
-import { stringify as fastStringify } from '../dist/esm/index.mjs';
+import safeStableStringify from 'safe-stable-stringify';
+import { stringify as fastStringify } from '../dist/es/index.mjs';
 import jsonCycle from 'json-cycle';
 import jsonStableStringify from 'json-stable-stringify';
 import jsonStringifySafe from 'json-stringify-safe';
@@ -111,6 +112,7 @@ const packages = {
   'json-stable-stringify': jsonStableStringify,
   'json-stringify-safe': jsonStringifySafe,
   superjson: SuperJSON.stringify,
+  'safe-stable-stringify': safeStableStringify,
 };
 
 const benchmarks = {};
